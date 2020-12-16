@@ -19,7 +19,7 @@ def languagetranslatorengine():
     str_input = request.json['str_inputvalue']
     dest_Language = request.json['str_destLang']
     TranslatedText = translator.translate(str_input,dest=dest_Language)
-    return TranslatedText
+    return jsonify({'results': TranslatedText})
 
 
 if __name__ == "__main__":
